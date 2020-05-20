@@ -12,7 +12,7 @@ set (CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=gnu++17 -D__STRICT_ANSI__")
 
 
-find_package(Boost 1.70 REQUIRED COMPONENTS
+find_package(Boost 1.73 REQUIRED COMPONENTS
   date_time
   system
   filesystem
