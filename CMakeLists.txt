@@ -11,7 +11,8 @@ list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake/Modules)
 set (CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=gnu++17 -D__STRICT_ANSI__")
 
-
+FILE(GLOB UDP_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/src/udp/*.cpp )
+FILE(GLOB UDP_HDRS ${CMAKE_CURRENT_SOURCE_DIR}/src/udp/*.h )
 find_package(Boost 1.73 REQUIRED COMPONENTS
   date_time
   system
@@ -36,7 +37,7 @@ if(NOT Boost_FOUND)
 endif()
 #  add_subdirectory(controllers)
   include_directories(${Boost_INCLUDE_DIRS})
-  add_executable(${PROJECT_NAME} "main.cpp" )
+  add_executable(${PROJECT_NAME} "main.cpp" ${UDP_SRCS} ${UDP_HDRS} )
 #  add_dependencies(${PROJECT_NAME} database)
 
   target_link_libraries(${PROJECT_NAME}
