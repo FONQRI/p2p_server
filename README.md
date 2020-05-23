@@ -1,6 +1,6 @@
 # p2p_server
 
-This is a simple STUN server and source is from https://www.tuicool.com/articles/YNBVrei with a little edit. you can use it with [p2p_client](https://gitlab.com/complete_graph/p2p_client)
+This is a simple STUN server and source is from https://www.tuicool.com/articles/YNBVrei with a little edit. you can use it with [p2p_client](https://github.com/FONQRI/p2p_client)
 
 ### Prerequisites
 
